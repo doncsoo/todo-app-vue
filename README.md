@@ -6,7 +6,7 @@ A telepítéshez a gyökér könyvtárben elég lefuttatni az `npm i` parancsot.
 
 A kliens részét először le kell fordítani (`npm run build`), majd a szervert elindítani (`npm run start`). A szerver a `localhost:8080` fog figyelni.
 
-## Fejleszés
+## Fejlesztés
 
 A szerver fájlok módosítása után újra kell indítani a szervert, illetve a kliens fájlok módosításakor újra kell fordítani a klienst.
 
