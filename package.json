@@ -1,0 +1,38 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "A to-do app",
+  "scripts": {
+    "preinstall": "cd client && npm i && cd ../server && npm i && cd ..",
+    "start": "nodemon server",
+    "build": "cd client && npm run build",
+    "test": "cd server && npm test"
+  },
+  "author": "<nanoxs10@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "cors": "^2.8.5",
+    "mocha-suppress-logs": "^0.2.0",
+    "nodemon": "^2.0.7",
+    "vuetify-loader": "^1.4.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "chai": "^4.2.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.1",
+    "mocha": "^8.2.1",
+    "rimraf": "^3.0.2",
+    "vue": "^2.6.12",
+    "vue-loader": "^14.2.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

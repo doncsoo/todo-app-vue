@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Todo App">
+    <meta name="application-name" content="Todo App">
+    <meta name="description" content="Todo App">
+
+    <title>Todo App</title>
+</head>
+<body class="skin-default layout-boxed">
+<div id="app" class="wrapper">
+    <div class="mycontainer">
+        <div class="myheader">
+            <h2 class="date">{{getWeekDay()}}</h2>
+            <h5 class="month">{{getMonth()}}</h5>
+            <p class="tasknumber">{{getTodosNumber()}}</p>
+            <br>
+            <b-button class="addnew" pill v-b-modal="'my-modal'"><b-icon-calendar-plus></b-icon-calendar-plus></b-button>
+        </div>
+        <div class="mycontent">
+            <todoentry v-for = "item in todos" v-bind:id = "item.id" v-bind:title = "item.description" v-bind:time = "item.time" v-bind:complete = "item.complete"></todoentry>
+        </div>
+    </div>
+    <b-modal id="my-modal" title="New Item" hide-footer>
+        <div class="d-block text-center">
+            <b-form @submit="createTodo">
+                <b-form-group
+                  label="Item Description"
+                  label-for="input">
+                  <b-form-input
+                    id="input"
+                    v-model="add_form.title"
+                    placeholder="Something to do"
+                    required
+                  ></b-form-input>
+                </b-form-group>
+                <b-form-group
+                  label="Item Schedule"
+                  label-for="time">
+                  <b-time id="time" v-model="add_form.time" required></b-time>
+                </b-form-group>
+                <b-button type="submit" variant="primary">Submit</b-button>
+            </b-form>
+        </div>
+    </b-modal>
+</div>
+<!-- built files will be auto injected -->
+</body>
+</html>

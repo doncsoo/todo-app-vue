@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$header_font: 'Open Sans', sans-serif;
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(225deg, rgba(5,0,82,1) 0%, rgba(20,20,158,1) 40%, rgba(0,212,255,1) 100%);
+}
+
+.mycontainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  border-radius: 10px;
+  width: 500px;
+  height: 70vh;
+  overflow: auto;
+}
+
+.myheader {
+    background-color: rgb(230,230,230);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    p, h5 {
+        font-family: $header_font;
+        color: rgb(145,145,145);
+    }
+
+    h2 {
+        font-family: $header_font;
+        font-weight: bold;
+        color: rgb(3,127,252);
+    }
+}
+
+.editicon {
+    fill: gray;
+    margin-left: 3px;
+    margin-right: 3px;
+
+    :hover {
+        fill: black;
+    }
+}
+
+.addnew {
+    float: right;
+    padding: 12px;
+}
+
+.month {
+    display: inline;
+    padding-bottom: 40px;
+}
+
+.tasknumber {
+    float: right;
+    padding-bottom: 30px;
+}
+
+.task {
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.time {
+    float: right;
+}
+
+.todo {
+    margin-bottom: 1px;
+    padding: 20px;
+}
+
+.complete {
+    background-color: rgb(230,230,230);
+
+    h6 {
+        text-decoration: line-through;
+        color: rgb(145,145,145);
+    }
+}
+
+.checkbox {
+    display: inline;
+}
